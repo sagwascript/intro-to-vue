@@ -9,7 +9,7 @@ const app = Vue.createApp({
     updateCart(id) {
       this.cart.push(id);
     },
-    removeFromCart(id) {
+    removeById(id) {
       const index = this.cart.lastIndexOf(id);
       this.cart = this.cart.filter((item, idx) => idx !== index);
     }

@@ -31,9 +31,10 @@ app.component("product-display", {
         <div 
           v-for="(variant, index) in variants" 
           :key="variant.id" 
-          @mouseover="updateVariant(index)" 
+          @click="updateVariant(index)" 
           class="color-circle" 
-          :style="{ backgroundColor: variant.color }">
+          :class="{ ring: selectedVariant === index }"
+          :style="{ backgroundColor: variant.color, cursor: 'pointer' }">
         </div>
         
         <button 
